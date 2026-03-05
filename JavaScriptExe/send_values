@@ -1,0 +1,29 @@
+# from selenium import webdriver
+# from selenium.webdriver.common.by import By
+# from time import sleep
+#
+# options=webdriver.ChromeOptions()
+# options.add_experimental_option("detach",True)
+# driver=webdriver.Chrome(options=options)
+# driver.maximize_window()
+# driver.get("https://demo.automationtesting.in/Datepicker.html")
+# sleep(2)
+# disableElement=driver.find_element(By.ID,"datepicker1")
+# driver.execute_script("arguments[0],value='02/28/2026';",disableElement)
+
+
+
+
+from selenium import webdriver
+from selenium.webdriver import ActionChains
+from selenium.webdriver.common.by import By
+from time import sleep
+
+options=webdriver.ChromeOptions()
+options.add_experimental_option("detach",True)
+driver=webdriver.Chrome(options=options)
+driver.maximize_window()
+driver.get("https://demo.automationtesting.in/Datepicker.html")
+sleep(2)
+disableElement=driver.find_element(By.ID,"datepicker1")
+driver.execute_script("arguments[0],value='02/28/2026';",disableElement)
